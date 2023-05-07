@@ -1,0 +1,155 @@
+:root {
+    --color-pink: #D95583;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #242427;
+    color: #FFF;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    gap: 7vw;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+.header__nav{
+    flex-grow: 1;
+    display: flex;
+    gap: 3vw;
+}
+.header__link {
+    position: relative;
+    font-size: 17px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.header__link::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1;
+
+	background-color: var(--color-pink);
+	opacity: 0;
+
+	transition: opacity .1s linear;
+}
+.header__link:hover::after {
+	opacity: 1;
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.logo {
+    height: 30px;
+}
+.header__logo > .header__link {
+    font-size: 25px;
+    transition: color .1s linear;
+}
+.header__logo:hover .header__link {
+    color: var(--color-pink);
+}
+
+/* Intro */
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+    height: 45vh;
+}
+.info {
+    width: 360px;
+    font-size: 25px;
+}
+.info__suptitle {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 150px;
+    margin-bottom: 0;
+}
+.info__title {
+    text-transform: uppercase;
+    margin: 0;
+}
+.info__title b {
+    color: var(--color-pink);
+}
+.info__subtitle {
+    font-size: 15px;
+    padding-left: 40px;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.picture {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin-right: 5px;
+}
+.picture__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: -1;
+}
+.picture > .glow {
+    height: 185%;
+    opacity: .70;
+}
+.picture > .shapes {
+    height: 100%;
+}
+.picture > .avatar {
+    height: 55%;
+}
+
+/* Social */
+
+.social {
+    display: flex;
+    margin-top: 250px;
+    gap: 19px;
+}
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23px;
+    height: 23px;
+}
+.social__icon {
+    display: inline-block;
+    height: 100%;
+    fill: #FFF;
+
+    transition: fill .1s linear;
+}
+.social__item:hover .social__icon {
+    fill: var(--color-pink);
+    opacity: 1;
+}
