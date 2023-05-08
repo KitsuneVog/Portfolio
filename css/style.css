@@ -217,7 +217,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
-    gap: 50px;
+    gap: 4vw;;
 }
 .dignities__item {
     width: 50%;
@@ -295,6 +295,11 @@ header {
 @media (max-width: 740px) {
     .dignities__item {
         max-width: 225px;
+    }
+}
+@media (max-width: 440px) {
+    .dignities__item {
+        width: 100%;
     }
 }
 
