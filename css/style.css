@@ -211,6 +211,7 @@ header {
 .dignities {
     display: flex;
     gap: 9vw;
+    font-size: 18px;
 }
 .dignities__inner {
     display: flex;
@@ -221,16 +222,33 @@ header {
 .dignities__item {
     width: 50%;
     max-width: 330px;
-    text-align: start;
+    text-align: center;
 }
 .dignities__icon {
     width: 200px;
     height: auto;
     margin-bottom: 25px;
 }
+.dignities__title {
+    color: #FFF;
+    margin-bottom: 10px;
+}
+.dignities__text {
+    font-size: .9em;
+}
 
 /* Media */
 
+@media (max-width: 1075px) {
+    .dignities {
+        display: grid;
+        gap: 0;
+    }
+    .dignities__inner {
+        margin-top: 25px;
+        justify-content: center;
+    }
+}
 @media (max-width: 915px) {
 
     /* Header */
@@ -272,6 +290,11 @@ header {
     .social {
         justify-content: center;
         gap: 55px;
+    }
+}
+@media (max-width: 740px) {
+    .dignities__item {
+        max-width: 225px;
     }
 }
 
