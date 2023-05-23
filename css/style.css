@@ -33,6 +33,7 @@ h1 {
 h1.chapter {
     position: relative;
     padding-left: 15px;
+    font-size: 2em;
 }
 h1.chapter::before {
     content: "";
@@ -201,7 +202,7 @@ header {
     height: 100%;
     fill: #FFF;
 
-    transition: fill .1s linear;
+    transition: fill .1s ease-in-out;
 }
 .social__item:hover .social__icon {
     fill: var(--color-pink);
@@ -222,7 +223,7 @@ header {
 }
 .dignities__inner {
     display: flex;
-    gap: 9vw;
+    gap: 1vw;
     font-size: 18px;
     margin-bottom: 25px;
 }
@@ -256,6 +257,25 @@ header {
 }
 .dignities__text {
     font-size: .9em;
+}
+
+/* Portfolio */
+
+.portfolio__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4vw;
+    margin: 40px 0;
+    justify-content: center;
+}
+.portfolio__item {
+    max-width: 350px;
+    border-radius: 5% 0 0 0;
+    box-shadow: inset 0 0 15px #000, 0 0 0px #000;;
+    transition: all .15s ease-in-out;
+}
+.portfolio__item:hover {
+    box-shadow: inset 0 0 0 #000, 0 8px 15px var(--color-pink);
 }
 
 /* Footer */
